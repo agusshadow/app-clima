@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    /* --bg-primary: #101039;
+    --bg-secondary: #27274C;
+    --text-secondary: rgb(191, 191, 191); */
+
+    /* --bg-primary: #e5ebf5;
+    --bg-secondary: #4EACFB;
+    --text-secondary: #c7d7e5; */
+
+    /* e5ebf5 */
+    --bg-primary: #f3f5fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #4EACFB;
+    --text-secondary: #c7d7e5;
+}
+
+html, #app {
+    background-color: var(--bg-primary);
+    background-color: var(--bg-primary);
+}
+
+.busqueda {
+    background-color: var(--bg-primary);
+}
+
+.info-clima {
+    background-color: var(--bg-secondary);
+    -webkit-box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+    -moz-box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+    box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+}
+
+.grados {
+    font-size: 90px;
+    /* text-shadow: 0px 0px 4px #4EACFB; */
+}
+
+
+.texto-secundario {
+    color: var(--text-primary);
+}
+
+.ciudad::before {
+    content: "";
+    background-image: url(../imagenes/locacion.png);
+    background-size: contain;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    margin: auto 5px auto 0;
+}
+
+.data-clima {
+    color: var(--text-secondary);
+}
+
+.dias {
+    background-color: var(--bg-secondary);
+    -webkit-box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+    -moz-box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+    box-shadow: 0px 0px 50px -35px rgba(201,205,212,1);
+}
+
+
+.dias li{
+    list-style: none;
+}
+
+.img-dias {
+    width: 15%;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s
+  }
+  .fade-enter, .fade-leave-to {
+    opacity: 0
+  }

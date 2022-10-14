@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- link iconos CLIMA
+    https://www.flaticon.com/packs/weather-161?word=weather -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="icon.png">
+
+    <title>App clima</title>
+
+</head>
+<body>
+
+    <div id="app">
+        <div class="container">
+
+            <header class="pt-3">
+
+                <h1 class="text-center fs-5">App <span class="texto-secundario">clima</span></h1>
+
+                <busqueda @data="data = $event" @dias="dias = $event" @mapa="ubicacion.mapa = $event"></busqueda>
+
+                <p v-if="!data.main" class="text-muted text-center pt-4">No se encontraton resultados</p> 
+
+            </header>
+                
+            <main v-if="data.main">
+
+                <info-clima :data="data"></info-clima>
+                 
+                <mapa :mapa="ubicacion.mapa"></mapa>
+
+                <h2 class="text-center mt-5 fs-5">Proximas horas</h2>
+                
+                <dias :dias="dias"></dias>
+
+            </main>
+
+            <footer class="row pt-1 pb-3 pt-2 d-flex justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h2 class="text-center fs-5 me-3">App <span class="texto-secundario">clima</span></h2>
+                        <small class="text-center">Desarollado por Agustin Gonzalez</small>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    <script src="componentes/mapa.js"></script>
+    <script src="componentes/dias.js"></script>
+    <script src="componentes/info-clima.js"></script>
+    <script src="componentes/busqueda.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
