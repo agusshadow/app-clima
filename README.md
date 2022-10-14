@@ -3,7 +3,7 @@ Datos sobre el alumno
 Nombre completo: Agustin Gonzalez
 Comision: DWN3AV
 
-Camino a seguir: B (mapa)
+Camino elegido: B (mapa)
 
 Instrucciones a seguir:
 
