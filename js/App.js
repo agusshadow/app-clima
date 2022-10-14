@@ -12,20 +12,13 @@ const app = new Vue({
         }
     },
     mounted() {
-
-        // let apitom = "JWchzxsenApU5iNHdMRhQ7AsFZaOnEq3"
-
         if (!localStorage.clima) {
-
             navigator.geolocation.getCurrentPosition((ubicacion)=> {
-                // consigo la ubicacion del usuario y la guardo en ubicacion con su long y lat
                 this.ubicacion.longitude = ubicacion.coords.longitude
                 this.ubicacion.latitude = ubicacion.coords.latitude
 
-                // llamo a la api de mapas y le paso las coordenadas
                 fetch(`https://api.tomtom.com/map/1/staticimage?key=JWchzxsenApU5iNHdMRhQ7AsFZaOnEq3&center=${this.ubicacion.longitude},${this.ubicacion.latitude}&zoom=12&width=400&height=400`)
                 .then(response => {
-                // guardo el src de la respuesta en mapa
                 this.ubicacion.mapa = {estado: true, contenido: response.url}
                 })
 
@@ -37,9 +30,7 @@ const app = new Vue({
                 .then(response => response.json())
                 .then(data => this.dias = data)  
 
-             })
-            
-            
+             }) 
         } else {
             this.data = JSON.parse(localStorage.clima)
             this.dias = JSON.parse(localStorage.dias)

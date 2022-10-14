@@ -21,7 +21,6 @@ Vue.component('busqueda', {
         buscar(valor) {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${valor}&appid=${this.api.key}&units=metric&lang=es`;
             let urlxdia = `https://api.openweathermap.org/data/2.5/forecast?q=${valor}&appid=${this.api.key}&units=metric&cnt=8&lang=es`
-
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -38,14 +37,12 @@ Vue.component('busqueda', {
                             }    
                         })
                 })
-
             fetch(urlxdia)
                 .then(response => response.json())
                 .then(data => {
                     this.$emit('dias', data);
                     localStorage.dias = JSON.stringify(data)
                 })
-
             this.valor = "";
         },
     },

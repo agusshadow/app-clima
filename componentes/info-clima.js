@@ -31,9 +31,15 @@ Vue.component('info-clima', {
                             <div v-if="vermas">
                                 <div class="pb-1 pt-4">
                                     <p class="fs-5 data-clima">Min {{ data.main.temp_min | number('0')  }}° | Max {{ data.main.temp_max | number('0')  }}°</p>
+                                </div> 
+                                <div class="">
+                                    <p class="fs-5 data-clima">Termica {{ data.main.feels_like  }}°</p>
+                                </div>
+                                <div class="pb-1">
+                                    <p class="fs-5 data-clima">Humedad {{ data.main.temp_min | number('0')  }}%</p>
                                 </div>
                                 <div class="">
-                                    <p class="fs-5 data-clima">Humedad {{ data.main.temp_min | number('0')  }}%</p>
+                                    <p class="fs-5 data-clima">Vel. viento {{ data.wind.speed  }}</p>
                                 </div>
                             </div>
                         </transition>
@@ -42,6 +48,7 @@ Vue.component('info-clima', {
     methods: {
         switchVerMas() {
             this.vermas = !this.vermas
+            console.log(this.data);
         },
     },
     computed: {
