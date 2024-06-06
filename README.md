@@ -1,11 +1,5 @@
-Datos sobre el alumno
+## App clima
 
-Nombre completo: Agustin Gonzalez
-Comision: DWN3AV
+https://app-clima-shadow.vercel.app/
 
-Camino elegido: B (mapa)
-
-Instrucciones a seguir:
-
-- al iniciar la web se deben activar los permisos para acceder a la ubicacion
-
+* al iniciar la web se deben activar los permisos para acceder a la ubicacion
